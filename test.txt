@@ -1,0 +1,122 @@
+
+//******************** Staff.java *************************
+
+class Staff {
+	int staffId;
+	long phone;
+	float salary;
+	String name;
+
+void read(){
+	Scanner in = new Scanner(System.in);
+System.out.print("Enter Staff Name:");
+	name= in.nextLine();
+	System.out.print("Enter Staff id:");
+	staffId= in.nextInt();
+	System.out.print("Enter Staff phone No.:");
+	phone= in.nextLong();
+	System.out.print("Enter Staff salary:");
+	salary= in.nextFloat();
+    }
+	void display(){
+
+		System.out.println("Staff Id :" + staffId);
+		System.out.println("Staff Name : " + name);
+		System.out.println("Staff Phone : " + phone);
+		System.out.println("Staff Salary : " + salary);
+	}
+
+}
+
+
+//******************* Teaching.java *************************
+
+class Teaching extends Staff{
+	String domain;
+	int publications;
+	
+	void read(){
+		System.out.println("Enter Teaching Staff details:");
+		super.read();
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter domain of Staff:");
+	domain= in.nextLine();
+	System.out.print("Enter no of publications of Staff:");
+
+	publications= in.nextInt();
+	}
+
+	void display(){
+		super.display();
+		System.out.println("Domain expertize: " + domain);
+		System.out.println("Publications of staff: " + publications);
+		System.out.println("Staff Type : Teaching Staff");
+	}
+}
+
+
+//******************* Technical.java *************************
+class Technical extends Staff{
+	String skills;
+	
+	void read(){
+		System.out.println("Enter Technical Staff details:");
+		super.read();
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter skills of technical Staff:");
+	skills= in.nextLine();
+	}
+	
+	void display(){
+		super.display();
+		System.out.println("Skills of a staff are : "+ skills);
+		System.out.println("Staff Type : Technical Staff");
+	}
+}
+
+
+//******************* Contract.java *************************
+class Contract extends Staff{
+	int period;
+	
+     void read(){
+		System.out.println("Enter Contract Staff details:");
+		super.read();
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter period of contract of Staff:");
+	period= in.nextInt();
+	}	
+	void display(){
+		super.display();
+		System.out.println("Contract Period is:" + this.period+”Years”);
+		System.out.println("Staff Type : Contract Staff");
+	}
+}
+
+
+
+//******************* StaffMain.java *************************
+
+private class staffMain{
+	publicstaticvoid main(String args[]){
+		Staff ref;
+		Teaching teachingStaff= new Teaching();
+		Technical techStaff = new Technical();
+		Contract contractStaff = new Contract();
+		
+		ref = teachingStaff;
+		ref.read();
+		ref.display();
+		System.out.println("\n-----------------------------");
+		
+		ref = techStaff;
+		ref.read();
+		ref.display();
+		System.out.println("\n-----------------------------");
+		
+		ref = contractStaff;
+		ref.read();
+		ref.display();
+		System.out.println("\n-----------------------------");
+	}
+}

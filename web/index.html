@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <script src="/eel.js"></script>
+    <title>Java Extraction</title>
+</head>
+
+<body>
+
+    <div class="split left">
+
+        <div class="centered" style="margin-top: 20px;">
+            <textarea id="text" rows="29" cols='70' style="padding-left: 10px;"></textarea>
+        </div>
+    </div>
+
+    <div class="split right">
+        
+        <div class="centered">
+            &nbsp;
+            <h3>Classes</h3>
+            <textarea class="outputs"  id="classes"rows="5" cols='30'></textarea>
+            &nbsp;
+            <h3>Methods</h3>
+            <textarea class="outputs"  rows="5" cols='30'></textarea>
+            &nbsp;
+            <h3>Objects</h3>
+            <textarea class="outputs"  rows="5" cols='30'></textarea>
+            <button class="btn btn-primary" type="submit" style="background-color: darkgreen;" onclick="code()">Run.</button>
+            &nbsp;
+            &nbsp;
+            <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgba(169, 169, 169, 0.623);" onclick="uml()">UML</button>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="UML.png" alt="" srcset="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

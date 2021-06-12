@@ -1,0 +1,30 @@
+title My code
+scale 2
+class Staff {
+	+ int : staffId
+	+ float : salary
+	+ String : name
+	+ void : read()
+	+ void : display()
+}
+class Teaching {
+	+ String : domain
+	+ int : publications
+	+ void : read()
+	+ void : display()
+}
+class Technical {
+	+ String : skills
+	+ void : read()
+	+ void : display()
+}
+class Contract {
+	+ int : period
+	+ void : read()
+	+ void : display()
+}
+class staffMain {
+}
+Staff <|-- Teaching
+Staff <|-- Technical
+Staff <|-- Contract
